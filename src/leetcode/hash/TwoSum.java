@@ -34,7 +34,7 @@ public class TwoSum {
 
     public static int[] twoSum(int[] nums, int target) {
         // key:num[i] 数组值  value:数组下标
-        // 遍历数组，使用 target-num[i] 作为 key 来查找map中是否存在对应的值，若存在 则直接使用map.value 给结果数组赋值并返回
+        // 遍历数组，使用 target-num[i] 作为 key 来查找map中是否存在对应的值，若存在 则直接使用map.value 作为数组下标 给结果数组赋值并返回
         Map<Integer, Integer> map = new HashMap<>();
         int[] result = new int[2];
         for (int i = 0; i < nums.length; i++) {
