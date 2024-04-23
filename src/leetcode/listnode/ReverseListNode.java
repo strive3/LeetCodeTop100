@@ -47,7 +47,7 @@ package leetcode.listnode;
 //
 // 进阶：链表可以选用迭代或递归方式完成反转。你能否用两种方法解决这道题？
 //
-// Related Topics 递归 链表 👍 3557 👎 0
+// Related Topics 递归 链表 👍 3557 👎
 
 
 //leetcode submit region begin(Prohibit modification and deletion)
@@ -66,6 +66,12 @@ class ListNode {
 // 1-> 2-> 3-> 4-> 5-> null
 // null <-1 <-2 <-3 <-4 <-5
 
+/**
+ * @Author du-xp
+ * @Date 2024/4/20
+ * @return: null
+ * @Description 206-反转链表
+ */
 public class ReverseListNode {
     /**
      * @Author du-xp

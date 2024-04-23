@@ -41,7 +41,7 @@ package leetcode.array;
 /**
  * @Author duxiaopeng
  * @Date 2024/4/18 22:30
- * @Description 思路：两边值一定是最大值，中间值一定是最小值，因此可以使用双指针的思路进行解题
+ * @Description 977-有序数组的平方，思路：两边值一定是最大值，中间值一定是最小值，因此可以使用双指针的思路进行解题
  */
 public class SortedSquares {
 

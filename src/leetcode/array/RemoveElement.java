@@ -60,7 +60,7 @@ package leetcode.array;
 /**
  * @Author duxiaopeng
  * @Date 2024/4/18 22:17
- * @Description TODO
+ * @Description 27-移除元素
  */
 public class RemoveElement {
    public int removeElement(int[] nums, int val) {
