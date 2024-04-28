@@ -49,7 +49,7 @@ package leetcode.listnode;
 public class RemoveNthFromEnd19 {
 
    public ListNode removeNthFromEnd(ListNode head, int n) {
-      // 虚拟头节点
+      // 虚拟头节点 不需要对头节点进行特殊处理
       ListNode dummy = new ListNode(0, head);
 
       // 快慢指针

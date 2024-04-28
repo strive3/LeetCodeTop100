@@ -88,6 +88,7 @@ public class ReverseListNode {
       while (current != null) {
           // 由于指向下一节点的指针后续要去掉，因此这次暂时保存一下 下一个节点
          ListNode next = current.next;
+         // 将当前节点指向前一个节点
          current.next = prev;
          prev = current;
          current = next;
