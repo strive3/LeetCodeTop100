@@ -62,18 +62,15 @@ public class RemoveNthFromEnd19 {
          n --;
       }
 
-      // 如果快指针已经到头，则不用再循环，负责快慢指针一起走
-      if (quick.next == null) {
-         slow.next = slow.next.next;
-      } else {
-         while (quick.next != null) {
-            quick = quick.next;
-            slow = slow.next;
-            if (quick.next == null) {
-               slow.next = slow.next.next;
-            }
-         }
+      // 如果快指针已经到头，代表慢指针指向要删除节点的前一个节点，则不用再循环，否则快慢指针一起走
+      while (quick.next != null) {
+         quick = quick.next;
+         slow = slow.next;
       }
+
+      // 删除节点
+      slow.next = slow.next.next;
+
 
       return dummy.next;
    }
