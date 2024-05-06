@@ -79,7 +79,7 @@ import java.util.Set;
  * @Date 2024/4/26 23:25
  * @Description 142-环形链表 II 方法1：哈希表，方法2：快慢指针
  */
-public class DetectCycle {
+public class DetectCycle142 {
     public ListNode detectCycle(ListNode head) {
         Set<ListNode> listNodes = new HashSet<>();
         while (head != null) {
