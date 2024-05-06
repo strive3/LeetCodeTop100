@@ -76,7 +76,7 @@ import java.util.HashSet;
  * @Date 2024/4/26 23:11
  * @Description 141-环形链表 方法1:使用hash，如果有环形链表存在，则一定有hash冲突；方法2:快慢指针，快指针每次移动两步，慢指针每次移动一步，如果快慢指针相遇，则说明有环形链表；
  */
-public class HasCycle {
+public class HasCycle141 {
 
    public boolean hasCycle(ListNode head) {
       HashSet<ListNode> set = new HashSet<>();
