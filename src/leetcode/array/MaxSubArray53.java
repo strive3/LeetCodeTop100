@@ -47,7 +47,7 @@ package leetcode.array;
  * @Date 2024/4/24 22:27
  * @Description 53-最大子数组和
  */
-public class MaxSubArray {
+public class MaxSubArray53 {
    public static int maxSubArray(int[] nums) {
       // 初始化结果集，如果为空，则返回0，负责默认赋值第一个元素
       int result = 0;
