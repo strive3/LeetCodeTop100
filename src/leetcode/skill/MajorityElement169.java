@@ -5,7 +5,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- *    169
+ *    169- 多数元素
  *
  * 给定一个大小为 n 的数组 nums ，返回其中的多数元素。多数元素是指在数组中出现次数 大于 ⌊ n/2 ⌋ 的元素。
  *
@@ -36,7 +36,7 @@ import java.util.Map;
  * 随机算法：随机挑选一个数，来验证是否是众数，如果是则直接返回
  *
  */
-public class MajorityElement {
+public class MajorityElement169 {
 
     // 时间复杂度 O(n)  空间复杂度 O(n)
     public int majorityElement(int[] nums) {
