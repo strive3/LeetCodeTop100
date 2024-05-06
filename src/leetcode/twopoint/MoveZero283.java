@@ -27,6 +27,8 @@ import java.util.Arrays;
  *
  * 进阶：你能尽量减少完成的操作次数吗？
  *
+ * 283-移动零
+ *
  * 思路：
  * 使用双指针，左指针指向当前已经处理好的序列的尾部，右指针指向待处理序列的头部。
  * 右指针不断向右移动，每次右指针指向非零数，则将左右指针对应的数交换，同时左指针右移。
@@ -35,7 +37,7 @@ import java.util.Arrays;
  * 右指针左边直到左指针处均为零。
  * 因此每次交换，都是将左指针的零与右指针的非零数交换，且非零数的相对顺序并未改变。
  */
-public class MoveZero {
+public class MoveZero283 {
     public static void moveZeroes(int[] nums) {
         // right 右指针，left 左指针  ,均必须从0开始
         int right = 0;
