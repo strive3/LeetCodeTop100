@@ -62,7 +62,7 @@ package leetcode.array;
  * @Date 2024/4/18 22:17
  * @Description 27-移除元素
  */
-public class RemoveElement {
+public class RemoveElement27 {
    public int removeElement(int[] nums, int val) {
       int slow = 0;
       for (int fast = 0; fast < nums.length; fast++) {
