@@ -53,7 +53,7 @@ package leetcode.array;
  * @Date 2024/4/18 22:47
  * @Description 209-长度最小的子数组
  */
-public class MinSubArrayLen {
+public class MinSubArrayLen209 {
     public int minSubArrayLen(int target, int[] nums) {
         // j 代表滑动窗口的终止位置
         int sum = 0;
