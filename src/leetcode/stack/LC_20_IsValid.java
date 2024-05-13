@@ -31,7 +31,7 @@ import java.util.Stack;
  * @Date 2024/5/2 10:25
  * @Description 20-有效的括号
  */
-public class IsValid20 {
+public class LC_20_IsValid {
 
     private static HashMap<Character, Character> map = new HashMap<>();
     static {
