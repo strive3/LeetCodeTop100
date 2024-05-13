@@ -53,7 +53,7 @@ package leetcode.listnode;
  * @Date 2024/4/26 23:38
  * @Description 21-合并两个有序链表 思路：遍历两个链表，取小的值，然后移动指针
  */
-public class MergeTwoLists21 {
+public class LC_21_MergeTwoLists {
     public ListNode mergeTwoLists(ListNode list1, ListNode list2) {
        if (list1 == null && list2 == null) return null;
 
@@ -89,7 +89,7 @@ public class MergeTwoLists21 {
     public static void main(String[] args) {
        ListNode list1 = new ListNode(1, new ListNode(2, new ListNode(4)));
        ListNode list2 = new ListNode(1, new ListNode(3, new ListNode(4)));
-       MergeTwoLists21 mergeTwoLists = new MergeTwoLists21();
+       LC_21_MergeTwoLists mergeTwoLists = new LC_21_MergeTwoLists();
        ListNode listNode = mergeTwoLists.mergeTwoLists(list1, list2);
        System.out.println(listNode);
     }
