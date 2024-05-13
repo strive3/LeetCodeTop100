@@ -3,7 +3,7 @@ package leetcode.listnode;
 /**
  * leetcode 160 相交链表
  */
-public class IntersectionNode160 {
+public class LC_160_IntersectionNode {
 
     /**
      * 有两个链表 链表A 和链表B
