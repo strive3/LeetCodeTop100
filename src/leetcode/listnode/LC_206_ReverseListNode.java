@@ -72,7 +72,7 @@ class ListNode {
  * @return: null
  * @Description 206-反转链表
  */
-public class ReverseListNode {
+public class LC_206_ReverseListNode {
     /**
      * @Author du-xp
      * @Date 2024/4/18
