@@ -37,7 +37,7 @@ import java.util.Arrays;
  * 右指针左边直到左指针处均为零。
  * 因此每次交换，都是将左指针的零与右指针的非零数交换，且非零数的相对顺序并未改变。
  */
-public class MoveZero283 {
+public class LC_283_MoveZero {
     public static void moveZeroes(int[] nums) {
         // right 右指针，left 左指针  ,均必须从0开始
         int right = 0;
