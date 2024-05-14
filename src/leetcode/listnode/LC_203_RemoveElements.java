@@ -51,9 +51,9 @@ package leetcode.listnode;
 /**
  * @Author duxiaopeng
  * @Date 2024/4/20 15:00
- * @Description 203-使用虚拟头节点的目的是 保证每个节点的删除逻辑都是一样的
+ * @Description 203-移除链表元素  使用虚拟头节点的目的是 保证每个节点的删除逻辑都是一样的
  */
-public class RemoveElements {
+public class LC_203_RemoveElements {
    public ListNode removeElements(ListNode head, int val) {
       //虚拟头节点
       ListNode dummyHead = new ListNode();
