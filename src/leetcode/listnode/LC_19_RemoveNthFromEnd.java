@@ -46,7 +46,7 @@ package leetcode.listnode;
  * @Description 19-删除链表的倒数第 N 个结点
  * 思路：1. 快慢指针，快指针先走n步，然后快慢指针一起走，快指针走到末尾，慢指针指向要删除的节点的前一个节点，删除即可。
  */
-public class RemoveNthFromEnd19 {
+public class LC_19_RemoveNthFromEnd {
 
    public ListNode removeNthFromEnd(ListNode head, int n) {
       // 虚拟头节点 不需要对头节点进行特殊处理
