@@ -45,7 +45,7 @@ package leetcode.listnode;
  * @Date 2024/4/28 20:50
  * @Description 2-两数相加
  */
-public class AddTwoNumbers2 {
+public class LC_2_AddTwoNumbers {
 
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         // 初始化l1的遍历指针
@@ -109,6 +109,6 @@ public class AddTwoNumbers2 {
         ListNode l2 = new ListNode(5);
         l2.next = new ListNode(6);
         l2.next.next = new ListNode(4);
-        System.out.println(new AddTwoNumbers2().addTwoNumbers(l1, l2));
+        System.out.println(new LC_2_AddTwoNumbers().addTwoNumbers(l1, l2));
     }
 }
