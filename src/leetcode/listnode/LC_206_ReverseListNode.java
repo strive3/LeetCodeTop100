@@ -81,21 +81,27 @@ public class LC_206_ReverseListNode {
      * @Description 双指针解法，current指向当前节点，prev指向上一个节点。
      * 往后移动current，prev指向current，current指向next，递归解法是对该解法的改编
      */
-   public ListNode reverseList(ListNode head) {
-      ListNode current = head;
-      ListNode prev = null;
+    public ListNode reverseList(ListNode head) {
+        //  1 -> 2 -> 3 -> 4 -> 5 -> null
+        // current 为指针
+        ListNode current = head;
+        // prev 为指针
+        ListNode prev = null;
 
-      while (current != null) {
-          // 由于指向下一节点的指针后续要去掉，因此这次暂时保存一下 下一个节点
-         ListNode next = current.next;
-         // 将当前节点指向前一个节点
-         current.next = prev;
-         prev = current;
-         current = next;
-      }
-      return prev;
-   }
-
+        while (current != null) {
+            // ******由于指向下一节点的指针后续要去掉，因此这次暂时保存一下 下一个节点******
+            ListNode next = current.next;
+            // 将当前节点指向前一个节点
+            //  1 -> 2 -> 3 -> 4 -> 5 -> null
+            //  null <- 1  2 -> 3 -> 4 -> 5 -> null
+            current.next = prev;
+            // prev 指针向后移动
+            prev = current;
+            // current 指针向后移动
+            current = next;
+        }
+        return prev;
+    }
 
     public ListNode reverse(ListNode current, ListNode prev) {
         if (current == null) {
