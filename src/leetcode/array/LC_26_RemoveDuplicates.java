@@ -57,8 +57,6 @@ package leetcode.array;
 //
 // Related Topics 数组 双指针 👍 3578 👎 0
 
-import java.util.ArrayList;
-
 /**
  * @Author duxiaopeng
  * @Date 2024/6/18 19:05
