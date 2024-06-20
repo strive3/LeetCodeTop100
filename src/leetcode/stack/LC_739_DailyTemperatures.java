@@ -36,6 +36,8 @@ package leetcode.stack;
 // Related Topics 栈 数组 单调栈 👍 1772 👎 0
 
 import java.util.Arrays;
+import java.util.Deque;
+import java.util.LinkedList;
 import java.util.Stack;
 
 /**
@@ -46,8 +48,8 @@ import java.util.Stack;
 public class LC_739_DailyTemperatures {
    public int[] dailyTemperatures(int[] temperatures) {
       int[] result = new int[temperatures.length];
-      // 单调栈
-      Stack<Integer> stack = new Stack<Integer>();
+      // 单调栈  Deque
+      Deque<Integer> stack = new LinkedList<>();
 
       for (int i = 0; i < temperatures.length; i++) {
 
