@@ -45,9 +45,12 @@ import java.util.Stack;
 /**
  * @Author du-xp
  * @Date 2024/7/1
- * @param null:
- * @return: null
  * @Description 94-二叉树的中序遍历 递归+循环
+ * 左中右
+ *
+ * 1、确定递归函数的参数和返回值（一般是void，可以把想要的值直接放到方法参数中）
+ * 2、确定终止条件
+ * 3、确定单层递归的逻辑
  */
 public class LC_94_InorderTraversal {
 
@@ -60,12 +63,15 @@ public class LC_94_InorderTraversal {
         // 迭代
         // 遍历二叉树的指针
         TreeNode cur = root;
+        // 因为递归是通过栈来实现的，因此迭代法 等同于模拟递归
         Stack<TreeNode> stack = new Stack<>();
         while (cur != null || !stack.empty()) {
+            // 不为空，则push进栈
             if (cur != null) {
                 stack.push(cur);
                 cur = cur.left;
             } else {
+                // 为空则pop出栈
                 TreeNode temp = stack.pop();
                 result.add(temp.val);
                 cur = temp.right;
@@ -74,8 +80,11 @@ public class LC_94_InorderTraversal {
         return result;
     }
 
+    // 1、确定递归函数的参数和返回值（一般是void，可以把想要的值直接放到方法参数中）
     public void inOrder(TreeNode root) {
+        // 2、确定终止条件
         if (root == null) return;
+        // 3、确定单层递归的逻辑
         inOrder(root.left);
         result.add(root.val);
         inOrder(root.right);
