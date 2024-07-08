@@ -64,12 +64,14 @@ public class LC_226_InvertTree {
       if (root == null) return null;
 
       Deque<TreeNode> queue = new ArrayDeque();
+      // 队列操作方法 等价于 addLast方法
       queue.offer(root);
 
       while (!queue.isEmpty()) {
          int size = queue.size();
 
          while (size-- > 0) {
+            // 队列操作方法 等价于 removeFirst方法
             TreeNode node = queue.poll();
             swap(node);
             if (node.right != null) queue.offer(node.right);
