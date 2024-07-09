@@ -33,6 +33,10 @@ package leetcode.binarytree;
 //
 //
 // Related Topics 树 深度优先搜索 广度优先搜索 二叉树 👍 1830 👎 0
+
+import java.util.ArrayDeque;
+import java.util.Deque;
+
 /**
  * @Author duxiaopeng
  * @Date 2024/5/22 10:36
@@ -52,6 +56,29 @@ public class LC_104_MaxDepth {
             j += maxDepth(root.right);
         }
         return Math.max(i, j) + 1;
+    }
+
+    // 采用广度优先遍历
+    public int maxDepth2(TreeNode root) {
+        int result = 0;
+        if (root == null) return result;
+        Deque<TreeNode> queue = new ArrayDeque<TreeNode>();
+        queue.offer(root);
+
+
+        while (!queue.isEmpty()) {
+            int size = queue.size();
+            while (size -- > 0) {
+                TreeNode node = queue.poll();
+                if (node.left != null) queue.offer(node.left);
+                if (node.right != null) queue.offer(node.right);
+
+            }
+            result ++;
+
+        }
+        return result;
+
     }
 
 
