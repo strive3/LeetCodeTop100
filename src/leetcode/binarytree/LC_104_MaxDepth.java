@@ -42,23 +42,26 @@ import java.util.Deque;
  * @Date 2024/5/22 10:36
  * @Description
  * 104-二叉树的最大深度
+ *
+ * 深度：任意一个节点到根节点的距离   前序遍历（中左右）
+ * 高度：任意一个节点到叶子节点的距离 后序遍历（左右中） 可以将叶子节点的高度返回给父节点，父节点的高度就是叶子节点的高度+1
  */
 public class LC_104_MaxDepth {
 
+    // 根节点的高度，就是最大深度，因此这里可以使用后序遍历
     public int maxDepth(TreeNode root) {
+        // 空节点高度为0
         if (root == null) return 0;
-        int i = 0;
-        int j = 0;
-
-        if (root.left != null) {
-            i += maxDepth(root.left);
-        } if (root.right != null) {
-            j += maxDepth(root.right);
-        }
-        return Math.max(i, j) + 1;
+        // 左 节点高度
+        int leftHeight = maxDepth(root.left);
+        // 右 节点高度
+        int rightHeight = maxDepth(root.right);
+        // 中
+        // 子节点的高度 + 1
+        return Math.max(leftHeight, rightHeight) + 1;
     }
 
-    // 采用广度优先遍历
+    // 采用广度优先遍历，一层就是一个高度
     public int maxDepth2(TreeNode root) {
         int result = 0;
         if (root == null) return result;
