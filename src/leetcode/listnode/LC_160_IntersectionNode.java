@@ -163,6 +163,7 @@ public class LC_160_IntersectionNode {
         // A+B:4 1 8 4 5 null   5    6 1 8 4 5
         // B+A:5 6 1 8 4 5      null 4 1 8 4 5
         while (pointA != pointB) {// 这里比较的是链表的地址（包含后续的指针），因此当相等于的时候 可以直接结束
+            // pointA.next 存在null 节点   这里直接判断pointA是否为空，也就是从链表头开始判断，直至链表尾的null节点
             pointA = pointA == null ? headB : pointA.next;
             pointB = pointB == null ? headA : pointB.next;
         }
