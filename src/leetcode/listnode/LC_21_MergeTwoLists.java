@@ -86,6 +86,34 @@ public class LC_21_MergeTwoLists {
        return head;
     }
 
+
+   public ListNode mergeTwoLists2(ListNode list1, ListNode list2) {
+      if (list1 == null && list2 == null) return null;
+
+      // 定义返回的链表
+      ListNode head = new ListNode();
+      // 定义遍历返回链表的指针
+      ListNode cur = head;
+      // 当两个链表都不为空的时候，寻找两个链表中的小值补充到返回链表中。
+      while (list1 != null && list2 != null) {
+         if (list1.val <= list2.val) {
+            cur.next = list1;
+            list1 = list1.next;
+         } else {
+            cur.next = list2;
+            list2 = list2.next;
+         }
+         cur = cur.next;
+      }
+      // 将剩余没有遍历完成的链表 拼接到返回链表中
+      if (list1 != null) {
+         cur.next = list1;
+      } else {
+         cur.next = list2;
+      }
+      return head.next;
+   }
+
     public static void main(String[] args) {
        ListNode list1 = new ListNode(1, new ListNode(2, new ListNode(4)));
        ListNode list2 = new ListNode(1, new ListNode(3, new ListNode(4)));
@@ -93,4 +121,7 @@ public class LC_21_MergeTwoLists {
        ListNode listNode = mergeTwoLists.mergeTwoLists(list1, list2);
        System.out.println(listNode);
     }
+
+
+
 }
