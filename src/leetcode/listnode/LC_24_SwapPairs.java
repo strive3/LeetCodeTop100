@@ -50,7 +50,7 @@ package leetcode.listnode;
  *
  * 终：dummy -> 2 -> 1 -> 4 -> 3 -> 5
  */
-public class SwapPairs24 {
+public class LC_24_SwapPairs {
 
     public ListNode swapPairs(ListNode head) {
         if (head == null || head.next == null) return head;
@@ -60,17 +60,21 @@ public class SwapPairs24 {
         ListNode cur = dummy;
         // 遍历的终止条件：cur.next 和 cur.next.next 都不为空
         while (cur.next != null && cur.next.next != null) {
+            // next == 1
             ListNode next = cur.next;
+            // nextNext == 2
             ListNode nextNext = cur.next.next;
 
             // 交换
-            // 将 cur 指向 2
+            // 将 cur 指向 2           dummy -> 2
             cur.next = nextNext;
-            // 将 1 的 next 指向 3
+            // 将 1 的 next 指向 3      1 -> 3
             next.next = nextNext.next;
-            // 将 2 的 next 指向 1
+            // 将 2 的 next 指向 1      2 -> 1
             nextNext.next = next;
 
+            // 此时：dummy -> 2 -> 1 -> 3 -> 4 -> 5
+            // cur == 1
             cur = next;
         }
         return dummy.next;
@@ -78,6 +82,6 @@ public class SwapPairs24 {
 
     public static void main(String[] args) {
         ListNode listNode = new ListNode(1, new ListNode(2, new ListNode(3, new ListNode(4))));
-        System.out.println(new SwapPairs24().swapPairs(listNode));
+        System.out.println(new LC_24_SwapPairs().swapPairs(listNode));
     }
 }
