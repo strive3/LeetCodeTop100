@@ -43,6 +43,7 @@ import java.util.Queue;
 public class LC_101_IsSymmetric {
 
    // 广度优先遍历
+   // 迭代
    public boolean isSymmetric(TreeNode root) {
       if (root == null) return true;
       // 将左子树 和 右子树 都放入同一个队列中，遍历的时候，每次弹出两个节点，比较它们的值，如果值不相等，则返回false，
@@ -76,6 +77,34 @@ public class LC_101_IsSymmetric {
 
       }
       return true;
+   }
+
+   // 递归
+   public boolean isSymmetric2(TreeNode root) {
+      if (root == null) return true;
+      return compare(root.left, root.right);
+   }
+
+   private boolean compare(TreeNode left, TreeNode right) {
+      // 如果左右节点都为空，则认为是对称的 返回true
+      if (left == null && right == null) {
+         return true;
+      }
+      // 如果左右节点，有一个为空，一个不为空，则认为不对称 返回false
+      if (left == null || right == null) {
+         return false;
+      }
+      // 如果左右节点的值不相等，则认为不对称 返回false
+      if (left.val != right.val) {
+         return false;
+      }
+      // 递归判断左右子树是否对称
+      // 从另一个角度来讲，对于左子树，遍历顺序为：左 右 中；对于右子树，遍历顺序为：右 左 中。  算是后序遍历
+      boolean outSide = compare(left.left, right.right);
+      boolean inside = compare(left.right, right.left);
+      // 如果左右子树都对称，则返回true
+      boolean result = inside && outSide;
+      return result;
    }
 
    public static void main(String[] args) {
